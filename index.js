@@ -7,7 +7,10 @@ const setupArgs = Setup.getValidArgs(process.argv);
 Setup.printSetupValues(setupArgs);
 
 // Optimization, don't do more than needed
-const maxGeneration = setupArgs.y - 1 + setupArgs.binarySize;
+const maxGeneration = Setup.getMaxGenerationNumber(
+  setupArgs.y,
+  setupArgs.binarySize
+);
 let currentGenerationNumber = 1;
 console.log(`Optimization, don't go past generation: ${maxGeneration}`);
 
@@ -17,7 +20,7 @@ let currentGeneration = Setup.buildFirstGeneration(setupArgs.gridSize);
 
 // Now, check if the generation we have has a result
 // Then build the next generation if needed
-if (Result.containsResultPart(1, setupArgs)) {
+if (Result.containsResultPart(currentGenerationNumber, setupArgs)) {
   result.push(Result.getResultCell(setupArgs.x, currentGeneration));
 }
 

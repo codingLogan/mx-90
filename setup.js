@@ -24,14 +24,6 @@ function getValidArgs(argv) {
     return parsed;
   });
 
-  //   for (let i = 0; i < args.length; i++) {
-  //     if (Number.isNaN(Number.parseInt(args[i], 10))) {
-  //       throw new Error(`All arguments must be integers.
-  //       The argument provided was a ${typeof args[i]}
-  //      `);
-  //     }
-  //   }
-
   return {
     gridSize: numbers[0],
     x: numbers[1],
@@ -59,8 +51,13 @@ function printSetupValues({ gridSize, x, y, binarySize }) {
   `);
 }
 
+function getMaxGenerationNumber(yPosition, binarySize) {
+  return yPosition - 1 + binarySize;
+}
+
 module.exports = {
   getValidArgs,
   buildFirstGeneration,
   printSetupValues,
+  getMaxGenerationNumber,
 };
