@@ -1,0 +1,15 @@
+{
+  "name": "mx-90",
+  "version": "1.0.0",
+  "description": "Calculator for the MX 90 puzzle at mx.com/90",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "loganras",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.0.4"
+  }
+}
