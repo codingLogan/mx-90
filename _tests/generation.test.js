@@ -5,7 +5,7 @@ const {
   getParentCells,
   buildNextGeneration,
 } = require("../generation");
-const rules = require("./answerRules.json");
+const rules = require("../answerRules.json");
 
 describe("config tests", () => {
   const currentGeneration = [1, 2, 3, 4, 5, 6, 7, 8];

@@ -1,5 +1,5 @@
 const { computeNextGenerationCell } = require("../rules");
-const rules = require("./answerRules.json");
+const rules = require("../answerRules.json");
 
 describe("rule tests", () => {
   test("test rule 111 = 0", () => {

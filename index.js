@@ -1,6 +1,6 @@
 const Setup = require("./setup");
 const Result = require("./result");
-const rules = require("./_tests/answerRules.json");
+const rules = require("./answerRules.json");
 const { buildNextGeneration } = require("./generation");
 
 const setupArgs = Setup.getValidArgs(process.argv);

@@ -1,5 +1,5 @@
 const { computeNextGenerationCell } = require("./rules");
-const rules = require("./_tests/answerRules.json");
+const rules = require("./answerRules.json");
 
 function isLeftEdge(index) {
   return index === 0;
